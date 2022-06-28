@@ -43,37 +43,81 @@ $faq = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- cdn fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
 
+<header>
+    <!-- pre header -->
+    <div id="preHeader">
+        <div>
+            <img src="images/logo.svg" alt="logo google">
+            <span>Privacy e Termini</span>
+        </div>
+        <div id="profile">
+            <i class="fas fa-bars"></i>
+            <img src="images/userProfile.png" alt="immagine profilo">
+        </div>
+    </div>
+
+    <!-- nav -->
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Introduzione</a>
+            </li>
+            <li>
+                <a href="#">Norme sulla privacy</a>
+            </li>
+            <li>
+                <a href="#">Termini di servizi</a>
+            </li>
+            <li>
+                <a href="#">Tecnologie</a>
+            </li>
+            <li>
+                <a href="#" class="active">Domande frequenti</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
     
     
-<?php
-// ciclo per accedere alla risposta
-foreach ($faq as $key => $value) {
-    foreach ($value as $key => $risposta) {
-        if ($key === 'question') { ?>
-             
-            <h2>
-                <?= $risposta ?>
-            </h2><?php
+<div class="container">
+    <?php
 
-        } elseif ($key === 'answer') { ?>
-            <div>
-                <?= $risposta ?>
-            </div><?php
-        } elseif ($key === 'sub_process') { ?>
-            <h3>
-                <?= $risposta ?>
-            </h3><?php
-        } else {
-            echo $risposta;
+    // ciclo per decidere cosa stampare dell'array
+    foreach ($faq as $key => $value) {
+        foreach ($value as $key => $risposta) {
+            if ($key === 'question') { ?>
+
+                <h2>
+                    <?= $risposta ?>
+                </h2><?php
+
+            } elseif ($key === 'answer') { ?>
+
+                <div>
+                    <?= $risposta ?>
+                </div><?php
+
+            } elseif ($key === 'sub_process') { ?>
+
+                <h3>
+                    <?= $risposta ?>
+                </h3><?php
+
+            } else {
+                echo $risposta;
+            }
         }
     }
-}
-?>
+    ?>
+</div>
     
 </body>
 </html>

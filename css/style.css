@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial, Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+.active {
+    color: blue;
+}
+
+ul {
+    list-style-type: none;
+}
+ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav {
+    padding: 0 10px 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #555;
+}
+
+#preHeader {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+#profile img {
+    border-radius: 50%;
+}
+
+p {
+    padding: 20px 0;
+}
